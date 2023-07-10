@@ -1,7 +1,4 @@
-const revealElement = Array.from(document.querySelectorAll('.reveal'))
-
-
-
+const revealElement = Array.from(document.querySelectorAll('.reveal'));
 
 addEventListener('scroll', () => {
     revealElement.forEach(element => {
@@ -13,6 +10,3 @@ addEventListener('scroll', () => {
         element.classList.add('reveal_active');
     });
 })
-
-
-
