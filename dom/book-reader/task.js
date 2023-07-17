@@ -12,10 +12,12 @@ for(let element of controlerSize) {
         if(element.dataset.size == 'small') { 
             element.classList.toggle('font-size_active');
             bookSize.classList.toggle('book_fs-small');
+            bookSize.classList.remove('book_fs-big');
             
         }else if(element.dataset.size == 'big') {
             element.classList.toggle('font-size_active');
             bookSize.classList.toggle('book_fs-big');
+            bookSize.classList.remove('book_fs-small');
         }else {
             element.classList.toggle('font-size_active');
             bookSize.classList.remove('book_fs-big');
