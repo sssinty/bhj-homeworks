@@ -4,29 +4,28 @@
  const taskList = document.getElementById("tasks__list");
  
 function newTask(e) {
-    if(inputText.value != ''){
-        e.preventDefault();
-        const task = document.createElement("div");
-        task.classList.add("task");
+    e.preventDefault();
+    if(inputText.value.trim() != '') {
+    const task = document.createElement("div");
+    task.classList.add("task");
 
-        const taskTitle = document.createElement("div");
-        taskTitle.classList.add("task__title");
-        taskTitle.innerHTML = inputText.value;
+    const taskTitle = document.createElement("div");
+    taskTitle.classList.add("task__title");
+    taskTitle.innerHTML = inputText.value.trim();
 
-        const remove = document.createElement("a")
-        remove.href = "#";
-        remove.classList.add("task__remove");
-        remove.innerHTML = "&times;";
-        remove.addEventListener("click", () => {
-            taskList.removeChild(task);
-        });
+    const remove = document.createElement("a")
+    remove.href = "#";
+    remove.classList.add("task__remove");
+    remove.innerHTML = "&times;";
+    remove.addEventListener("click", () => {
+        taskList.removeChild(task);
+    });
 
-        task.appendChild(taskTitle);
-        task.appendChild(remove);
-        taskList.appendChild(task);
+    task.appendChild(taskTitle);
+    task.appendChild(remove);
+    taskList.appendChild(task);
 
-        form.reset();
-        
+    form.reset();
     }
 }
 
