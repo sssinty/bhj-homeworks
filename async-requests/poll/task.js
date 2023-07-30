@@ -6,7 +6,6 @@ const xhr = new XMLHttpRequest();
 xhr.open('GET', requestURL);
 xhr.responseType = 'json';
 xhr.onload = () => {
-    // console.log(xhr.response.data.answers, xhr.response.data)
     const answers = xhr.response.data.answers;
     pollTitle.textContent = xhr.response.data.title;
     for(let answerElem of answers) {
