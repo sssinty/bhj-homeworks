@@ -2,7 +2,7 @@ const progress = document.getElementById('progress');
 const btnAddFile = document.getElementById('file');
 const btnSendFile = document.getElementById('send');
 const form = document.getElementById('form')
-const requestURL = ' https://students.netoservices.ru/nestjs-backend/slow-get-courses';
+const requestURL = 'https://students.netoservices.ru/nestjs-backend/slow-get-courses';
 
 function upload(btnAddFile) {
     
