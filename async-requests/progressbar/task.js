@@ -4,10 +4,6 @@ const btnSendFile = document.getElementById('send');
 const form = document.getElementById('form')
 const requestURL = 'https://students.netoservices.ru/nestjs-backend/slow-get-courses';
 
-function upload(btnAddFile) {
-    
-}
-
 form.addEventListener('submit', e => {
     e.preventDefault();
     const file = btnAddFile.files[0];
