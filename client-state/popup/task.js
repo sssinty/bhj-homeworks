@@ -5,8 +5,6 @@ function setCookie(name, value) {
     document.cookie = name + '=' + encodeURIComponent(value);
 }
 
-
-
 function getCookie(name) {
     let parsi = document.cookie.split('; ');
     let cookie = parsi.find(p => p.startsWith(name + '='));
@@ -17,7 +15,8 @@ if(getCookie('name') === 'on') {
     modalWindow.classList.remove('modal_active');
 }
 
-// modalClose.addEventListener('click', () => {
-//     setCookie('name', 'on');
-//     modalWindow.classList.remove('modal_active'); 
-// });
+modalClose.addEventListener('click', () => {
+    setCookie('name', 'on');
+    modalWindow.classList.remove('modal_active'); 
+})
+

@@ -13,5 +13,8 @@ entryField.addEventListener('change', () => {
 
 deleteText.addEventListener('click', () => {
     localStorage.removeItem('text');
+    if(!localStorage.text) {
+        entryField.value = ""
+    }
 });
 
